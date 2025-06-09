@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.todo-container {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Кнопки фильтров */
+.filters {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /* расстояние между кнопками */
+    flex-wrap: wrap;
+    /* чтобы на маленьких экранах кнопки переходили на новую строку */
+}
+
+.filter-btn {
+    flex: 1 1 100px;
+    /* кнопки одинаковой ширины, минимум 100px */
+    padding: 10px 0;
+    border: none;
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-align: center;
+    user-select: none;
+    min-width: 100px;
+}
+
+.filter-btn:hover {
+    background-color: #bbb;
+}
+
+.filter-btn.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Список задач */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    cursor: pointer;
+    word-break: break-word;
+    /* перенос длинных слов */
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #888;
+    font-style: italic;
+}
+
+/* Опционально — иконка*
+  
+
+/* // Mobile styles */
+
+@media (max-width: 480px) {
+    body {
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .todo-container {
+        width: 100%;
+        padding: 15px 20px;
+        box-sizing: border-box;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input[type="text"] {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    ul li {
+        font-size: 18px;
+        padding: 12px 10px;
+    }
+
+    .filters {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .filter-btn {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px 0;
+    }
+}
